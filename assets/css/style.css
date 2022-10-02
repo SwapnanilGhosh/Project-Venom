@@ -611,6 +611,33 @@ video {
     background-color: black;
 }
 
+ol {
+    display: block;
+    margin-left: -10px;
+    color: white;
+  }
+  
+  ol li {
+    display: block;
+    position: relative;
+  }
+  
+  ol li:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  
+  ol li:before {
+    content: "";
+    position: absolute;
+    top: 1.2em;
+    left: -30px;
+    margin-top: -.9em;
+    background: red;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+  }
+
 .chart {
     height: 700px;
 }
@@ -686,6 +713,7 @@ video {
     background: #975bb0;
     box-shadow: 0px 5px 100px rgba(65, 84, 241, 0.4);
 }
+
 
 @media (max-width: 991px) {
     .chart {
@@ -2185,7 +2213,7 @@ padding-left: 15px;
 .contact .info-box {
     color: #444444;
     background-color: transparent;
-    border: solid 5px #975bb0;
+    border: solid 5px red;
     border-radius: 20px;
     padding: 30px;
 }
