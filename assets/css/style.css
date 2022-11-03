@@ -140,12 +140,12 @@ section {
 
 .back-to-top i {
     font-size: 24px;
-    color: #fff;
+    color: black;
     line-height: 0;
 }
 
 .back-to-top:hover {
-    background: #9900F0;
+    background: white;
     color: #fff;
 }
 
@@ -1554,6 +1554,7 @@ padding-left: 15px;
 .team {
     background-color: black !important;
   
+    margin: 5%;
 }
 
 .team .container {
