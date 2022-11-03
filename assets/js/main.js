@@ -214,6 +214,7 @@
 
     });
 
+    
     /**
      * Initiate portfolio lightbox 
      */
@@ -292,3 +293,4 @@ function DisplayWallet() {
         x.style.display = "none";
     }
 }
+
