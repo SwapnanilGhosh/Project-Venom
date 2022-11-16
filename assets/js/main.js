@@ -34,7 +34,7 @@
     /**
      * Navbar links active state on scroll
      */
-    let navbarlinks = select('#navbar .scrollto', true)
+    let navbarlinks = select('#sidenav .scrollto', true)
     const navbarlinksActive = () => {
         let position = window.scrollY + 200
         navbarlinks.forEach(navbarlink => {
@@ -105,7 +105,7 @@
      * Mobile nav toggle
      */
     on('click', '.mobile-nav-toggle', function(e) {
-        select('#navbar').classList.toggle('navbar-mobile')
+        select('#sidenav').classList.toggle('navbar-mobile')
         this.classList.toggle('bi-list')
         this.classList.toggle('bi-x')
     })
@@ -114,7 +114,7 @@
      * Mobile nav dropdowns activate
      */
     on('click', '.navbar .dropdown > a', function(e) {
-        if (select('#navbar').classList.contains('navbar-mobile')) {
+        if (select('#sidenav').classList.contains('navbar-mobile')) {
             e.preventDefault()
             this.nextElementSibling.classList.toggle('dropdown-active')
         }
@@ -127,7 +127,7 @@
         if (select(this.hash)) {
             e.preventDefault()
 
-            let navbar = select('#navbar')
+            let navbar = select('#sidenav')
             if (navbar.classList.contains('navbar-mobile')) {
                 navbar.classList.remove('navbar-mobile')
                 let navbarToggle = select('.mobile-nav-toggle')

@@ -182,6 +182,19 @@ section {
 
 }
 
+.logo-banner {
+    width:130%;
+    margin-top:-100px;
+    margin-left:-40px
+}
+.logo-banner1{
+    width:130%;
+    
+    margin-left:-40px;
+    margin-top:100px;
+}
+
+
 .header .logo-button {
     margin-left: 25%;
 }
@@ -191,6 +204,12 @@ section {
     margin-left: 0;
     
    }
+}
+
+.sidenav .logo-img {
+    width:80px;
+    margin-left:-5px;
+    padding-bottom:10px;
 }
 
 .header .logo-a {
@@ -219,13 +238,12 @@ section {
 
 }
 /** * Desktop Navigation */
-.navbar {
+.sidenav {
     padding: 0;
-    margin-left: 50%;
-    transform: translateX(-60%);
+    
 }
 
-.navbar ul {
+.sidenav ul {
     margin: 0;
     padding: 0;
     display: flex;
@@ -233,59 +251,114 @@ section {
     align-items: center;
 }
 
-.navbar li {
+.sidenav li {
     
     position: relative;
 }
 
-.navbar .nav-link:after {    
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 60%;
-    position: absolute;
-    background: #fff;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
+.sidenav {
+    height: 100%;
+    width: 100px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    color:#13233f;
+    border-right:solid 2px #13233f;
+    overflow-x: hidden;
+    padding-top: 20px;
   }
-.navbar .nav-link:hover:after { 
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #13233f;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+    border-right: solid 5px red;
+  }
+  
+  .main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+
+.sidenav a:after {    
+    border-right: solid 5px red;
+   
+    
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    
+  }
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    height: 100vh;
+    width: 15vw;
+    font-family: raleway;
+    background: transparent;
+  }
+  
+
+.sidenav .nav-link:hover:after { 
     width: 100%; 
     left: 10px; 
   }
 
-.navbar .btn-get-started:hover {
+.sidenav .btn-get-started:hover {
     border: solid 5px red;
 }
 
-.navbar a, .navbar a:focus {
+.sidenav a, .sidenav a:focus {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 10px 10px 30px;
+    padding: 0 15px 4px ;
     font-family: "Nunito", sans-serif;
-    font-size: 20px;
+    font-size: 12px;
     font-weight: 700;
-    color: #ffffff;
+    color: #43526d;
     white-space: nowrap;
     transition: 0.3s;
 }
 
-.navbar a i, .navbar a:focus i {
+.main-anim {
+    width:110%
+}
+.main-anim1 {
+    width:90%;
+}
+
+.main-button:hover {
+    transform: scale(1.2);
+}
+
+
+
+.sidenav a i, .sidenav a:focus i {
     font-size: 12px;
     line-height: 0;
     margin-left: 5px;
 }
 
-.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-    color: red;
+.sidenav a:hover, .sidenav .active, .sidenav .active:focus, .sidenav li:hover > a {
+    color: white;
+    border-right: solid 3px #ecdbf2;
     
 }
 
 
 
-.navbar .getstarted, .navbar .getstarted:focus {
+.sidenav .getstarted, .sidenav .getstarted:focus {
     background: #4154f1;
     padding: 8px 20px;
     margin-left: 30px;
@@ -293,12 +366,12 @@ section {
     color: #fff;
 }
 
-.navbar .getstarted:hover, .navbar .getstarted:focus:hover {
+.sidenav .getstarted:hover, .sidenav .getstarted:focus:hover {
     color: #fff;
     background: white;
 }
 
-.navbar .dropdown ul {
+.sidenav .dropdown ul {
     display: block;
     position: absolute;
     margin: 0;
@@ -310,12 +383,12 @@ section {
    
 }
 
-.navbar .dropdown ul li {
+.sidenav .dropdown ul li {
     min-width: 200px;
     
 }
 
-.navbar .dropdown ul a {
+.sidenav .dropdown ul a {
     padding: 10px 20px;
     font-size: 15px;
     text-transform: none;
@@ -323,28 +396,30 @@ section {
     border-radius: 30px;
 }
 
-.navbar .dropdown ul a i {
+.sidenav .dropdown ul a i {
     font-size: 12px;
 }
 
-.navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
+.sidenav .dropdown ul a:hover, .sidenav .dropdown ul .active:hover, .sidenav .dropdown ul li:hover > a {
     color: #4154f1;
     border-radius: 30px;
+    background-color: transparent;
+    width: 75%;
 }
 
-.navbar .dropdown:hover > ul {
+.sidenav .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
 }
 
-.navbar .dropdown .dropdown ul {
+.sidenav .dropdown .dropdown ul {
     top: 0;
     left: calc(100% - 30px);
     visibility: hidden;
 }
 
-.navbar .dropdown .dropdown:hover > ul {
+.sidenav .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: 100%;
@@ -352,11 +427,11 @@ section {
 }
 
 @media (max-width: 1366px) {
-    .navbar .dropdown .dropdown ul {
+    .sidenav .dropdown .dropdown ul {
         left: -90%;
     }
 
-    .navbar .dropdown .dropdown:hover > ul {
+    .sidenav .dropdown .dropdown:hover > ul {
         left: -100%;
     }
 }
@@ -381,18 +456,18 @@ section {
         display: block;
     }
 
-    .navbar ul {
+    .sidenav ul {
         display: none;
     }
-    .navbar .btn-get-started {
+    .sidenav .btn-get-started {
         border: none !important;
     }
-    .navbar .nav-link:hover:after {
+    .sidenav .nav-link:hover:after {
         width: 0%;
     }
 }
 
-.navbar-mobile {
+.sidenav-mobile {
     position: fixed;
     overflow: hidden;
     top: 0;
@@ -405,13 +480,13 @@ section {
     transition: 0.3s;
 }
 
-.navbar-mobile .mobile-nav-toggle {
+.sidenav-mobile .mobile-nav-toggle {
     position: absolute;
     top: 15px;
     right: 15px;
 }
 
-.navbar-mobile ul {
+.sidenav-mobile ul {
     display: block;
     position: absolute;
     top: 55px;
@@ -425,21 +500,21 @@ section {
     transition: 0.3s;
 }
 
-.navbar-mobile a, .navbar-mobile a:focus {
+.sidenav-mobile a, .sidenav-mobile a:focus {
     padding: 10px 20px;
     font-size: 28px;
     color: #012970;
 }
 
-.navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+.sidenav-mobile a:hover, .sidenav-mobile .active, .sidenav-mobile li:hover > a {
     color: red;
 }
 
-.navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
+.sidenav-mobile .getstarted, .sidenav-mobile .getstarted:focus {
     margin: 15px;
 }
 
-.navbar-mobile .dropdown ul {
+.sidenav-mobile .dropdown ul {
     position: static;
     display: none;
     margin: 10px 20px;
@@ -451,23 +526,23 @@ section {
     box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
 }
 
-.navbar-mobile .dropdown ul li {
+.sidenav-mobile .dropdown ul li {
     min-width: 200px;
 }
 
-.navbar-mobile .dropdown ul a {
+.sidenav-mobile .dropdown ul a {
     padding: 10px 20px;
 }
 
-.navbar-mobile .dropdown ul a i {
+.sidenav-mobile .dropdown ul a i {
     font-size: 12px;
 }
 
-.navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
+.sidenav-mobile .dropdown ul a:hover, .sidenav-mobile .dropdown ul .active:hover, .sidenav-mobile .dropdown ul li:hover > a {
     color: #4154f1;
 }
 
-.navbar-mobile .dropdown > .dropdown-active {
+.sidenav-mobile .dropdown > .dropdown-active {
     display: block;
 }
 /*-------------------------------------------------------------- # Hero Section --------------------------------------------------------------*/
@@ -814,11 +889,39 @@ ol {
 }
 
 
+.main-button {
+    width:140px;
+    position: relative;
+    padding: 10px;
+}
+@media screen and (min-width: 991px) and (max-width: 1165px) {
+    .main-button {
+        width: 120px;
+    }
+    .roadmap-text {
+        margin-left: -10px;
+    }
+}
+
+.roadmap-button {
+    width:180px;
+    position: relative;
+   
+}
+
+.text-color {
+    color: #97292f;
+}
+
 .about h3 {
     font-size: 14px;
     font-weight: 700;
-    color: #4154f1;
-    text-transform: uppercase;
+    color: #97292f;
+}
+.roadmap-text {
+    font-size: 14px;
+    font-weight: 700;
+    color: #9ab9dd ;
 }
 
 .about h2 {
